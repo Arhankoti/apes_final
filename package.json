@@ -1,0 +1,25 @@
+{
+  "name": "apes_final",
+  "version": "1.0.0",
+  "description": "Mountain Pine Beetle Outbreaks — static site",
+  "private": true,
+  "scripts": {
+    "lint:html": "htmlhint '*.html'",
+    "lint:css": "stylelint styles.css",
+    "lint": "npm run lint:html && npm run lint:css",
+    "build": "node build.mjs",
+    "serve": "http-server dist -p 3000 -o",
+    "dev": "http-server . -p 3000 -o",
+    "ci": "npm run lint && npm run build"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "html-minifier-terser": "^7.2.0",
+    "htmlhint": "^1.1.4",
+    "http-server": "^14.1.1",
+    "sharp": "^0.33.4",
+    "stylelint": "^16.6.1",
+    "stylelint-config-standard": "^36.0.1",
+    "vercel": "^37.0.0"
+  }
+}
